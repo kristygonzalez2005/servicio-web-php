@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+</head>
+<body>
+    <form action="registro.php" method="post">
+        <h1>Registro</h1>
+        <p>Nombre <input type="text" placeholder="Nombre de usuario" name="nombre"></p>
+        <p>Password <input type="password" placeholder="Ingrese su contraseña" name="password" ></p>
+        <p>Correo:<input type="email" placeholder="" name="correo" ></p>
+
+
+        <input type="submit" value="Registrarse">
+    </form>
+    <p>¿Ya tienes una cuenta? <a href="usuarios.php">Ingresa aquí</a></p>
+    <script>
+        function validarFormulario() {
+            var nombre = document.forms[0]["nombre"].value;
+            var password = document.forms[0]["password"].value;
+            var correo = document.forms[0]["correo"].value;
+
+            if (usuario === "" || password === "" || correo === "") {
+                alert("Por favor, ingresa todos los datos.");
+                return false; // Evita que se envíe el formulario
+            }
+
+            return true; // Envía el formulario si todos los campos están completos
+        }
+    </script>
+</body>
+</html>
+
